@@ -2,13 +2,9 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
-
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
-      font-family: "Raleway", sans-serif;
-
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     /* --primary: #203E78; */
     --primary: #203E78;
@@ -25,30 +21,27 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-}
-
-body {
+  }
+  body {
     margin: 0;
     padding: 0;
-}
-
-*, *:before, *:after {
+  }
+  *, *:before, *:after {
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-}
-.cs-topper {
+  }
+  .cs-topper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     text-transform: uppercase;
     text-align: inherit;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 0.25rem;
     display: block;
-}
-
-.cs-title {
+  }
+  .cs-title {
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
@@ -57,9 +50,8 @@ body {
     margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
-}
-
-.cs-text {
+  }
+  .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
@@ -67,8 +59,7 @@ body {
     max-width: 40.625rem;
     margin: 0;
     color: var(--bodyTextColor);
-}
-                            
+  }
   .cs-button-solid {
     font-size: 1rem;
     font-weight: bold;
@@ -205,11 +196,9 @@ body {
     font-size: 0.85vw;
   }
 }
-
 /*-- -------------------------- -->
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
-
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #dark-mode-toggle .cs-sun {
@@ -245,14 +234,14 @@ body {
   }
   #dark-mode-toggle .cs-moon {
     z-index: 2;
-    transition: transform .3s, opacity .3s;
+    transition: transform 0.3s, opacity 0.3s;
     fill: #1a1a1a;
   }
   #dark-mode-toggle .cs-sun {
     z-index: 1;
     transform: translate(-50%, 100%);
     opacity: 0;
-    transition: transform .3s, opacity .3s;
+    transition: transform 0.3s, opacity 0.3s;
   }
 }
 /* Tablet - 768px */
@@ -278,11 +267,9 @@ body {
     cursor: pointer;
   }
 }
-
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
-
 /* Mobile - 1023px */
 @media only screen and (max-width: 1023px) {
   body.cs-open {
@@ -300,11 +287,11 @@ body {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   #cs-navigation:before {
     /* black blurred overlay */
-    content: '';
+    content: "";
     width: 0%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
@@ -316,7 +303,7 @@ body {
     top: 100%;
     right: 0;
     z-index: -11;
-    transition: width .5s, opacity .3s;
+    transition: width 0.5s, opacity 0.3s;
   }
   #cs-navigation.cs-active:before {
     width: 100%;
@@ -325,7 +312,7 @@ body {
   #cs-navigation.cs-active .cs-ul-wrapper {
     opacity: 1;
     transform: scaleX(1);
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
   #cs-navigation.cs-active .cs-li {
     transform: translateX(0);
@@ -385,7 +372,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    transition: opacity .3s, visibility .3s, height .3s;
+    transition: opacity 0.3s, visibility 0.3s, height 0.3s;
   }
   #cs-navigation .cs-social-link {
     text-decoration: none;
@@ -440,7 +427,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform .6s;
+    transition: transform 0.6s;
   }
   #cs-navigation .cs-toggle.cs-active {
     transform: rotate(180deg);
@@ -476,8 +463,8 @@ body {
   #cs-navigation .cs-line1 {
     top: 0;
     transform-origin: center;
-    transition: transform .5s, top .3S, left .3S;
-    animation-duration: .7s;
+    transition: transform 0.5s, top 0.3S, left 0.3S;
+    animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-direction: normal;
@@ -485,15 +472,15 @@ body {
   #cs-navigation .cs-line2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    transition: top .3s, left .3s, transform .5s;
-    animation-duration: .7s;
+    transition: top 0.3s, left 0.3s, transform 0.5s;
+    animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-direction: normal;
   }
   #cs-navigation .cs-line3 {
     bottom: 0;
-    transition: bottom .3s, opacity .3s;
+    transition: bottom 0.3s, opacity 0.3s;
   }
   #cs-navigation .cs-ul-wrapper {
     min-width: 70vw;
@@ -509,7 +496,7 @@ body {
     z-index: -1;
     transform: scaleX(0);
     transform-origin: top right;
-    transition: transform .4s, opacity .3s;
+    transition: transform 0.4s, opacity 0.3s;
   }
   #cs-navigation .cs-ul {
     margin: 0;
@@ -533,34 +520,34 @@ body {
     /* transition from these values */
     transform: translateX(-2.5rem);
     opacity: 0;
-    transition: transform .6s, opacity .9s;
+    transition: transform 0.6s, opacity 0.9s;
   }
   #cs-navigation .cs-li:nth-of-type(1) {
-    transition-delay: .05s;
+    transition-delay: 0.05s;
   }
   #cs-navigation .cs-li:nth-of-type(2) {
-    transition-delay: .1s;
+    transition-delay: 0.1s;
   }
   #cs-navigation .cs-li:nth-of-type(3) {
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
   #cs-navigation .cs-li:nth-of-type(4) {
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
   #cs-navigation .cs-li:nth-of-type(5) {
-    transition-delay: .25s;
+    transition-delay: 0.25s;
   }
   #cs-navigation .cs-li:nth-of-type(6) {
-    transition-delay: .3s;
+    transition-delay: 0.3s;
   }
   #cs-navigation .cs-li:nth-of-type(7) {
-    transition-delay: .35s;
+    transition-delay: 0.35s;
   }
   #cs-navigation .cs-li:nth-of-type(8) {
-    transition-delay: .4s;
+    transition-delay: 0.4s;
   }
   #cs-navigation .cs-li:nth-of-type(9) {
-    transition-delay: .45s;
+    transition-delay: 0.45s;
   }
   #cs-navigation .cs-li-link {
     /* 16px - 24px */
@@ -574,7 +561,7 @@ body {
   }
   #cs-navigation .cs-li-link:before {
     /* active state underline */
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     background: currentColor;
@@ -615,7 +602,7 @@ body {
   body.dark-mode #cs-navigation .cs-top-link,
   body.dark-mode #cs-navigation .cs-desc {
     color: var(--bodyTextColorWhite);
-    opacity: .8;
+    opacity: 0.8;
   }
   body.dark-mode #cs-navigation .cs-link-icon {
     filter: grayscale(1) brightness(1000%);
@@ -628,11 +615,9 @@ body {
     color: var(--bodyTextColorWhite);
   }
 }
-
 /*-- -------------------------- -->
 <---     Navigation Dropdown    -->
 <--- -------------------------- -*/
-
 /* Mobile - 1023px */
 @media only screen and (max-width: 1023px) {
   #cs-navigation .cs-dropdown {
@@ -652,7 +637,7 @@ body {
   }
   #cs-navigation .cs-dropdown .cs-li-link {
     position: relative;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
   }
   #cs-navigation .cs-drop-icon {
     width: 0.9375rem;
@@ -678,7 +663,7 @@ body {
     gap: 0.75rem;
     transform: scale(0);
     transform-origin: top right;
-    transition: padding .3s, margin .3s, height .3s, opacity .3s, transform .3s, visibility .3s;
+    transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, transform 0.3s, visibility 0.3s;
   }
   #cs-navigation .cs-drop-li {
     list-style: none;
@@ -728,7 +713,7 @@ body {
     z-index: -100;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform .3s, visibility .3s, opacity .3s;
+    transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
   }
   #cs-navigation .cs-drop-li {
     list-style: none;
@@ -739,46 +724,46 @@ body {
     height: auto;
     display: block;
     transform: translateY(-0.625rem);
-    transition: opacity .6s, transform .6s;
+    transition: opacity 0.6s, transform 0.6s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(1) {
-    transition-delay: .05s;
+    transition-delay: 0.05s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(2) {
-    transition-delay: .1s;
+    transition-delay: 0.1s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(3) {
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(4) {
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(5) {
-    transition-delay: .25s;
+    transition-delay: 0.25s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(6) {
-    transition-delay: .3s;
+    transition-delay: 0.3s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(7) {
-    transition-delay: .35s;
+    transition-delay: 0.35s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(8) {
-    transition-delay: .4s;
+    transition-delay: 0.4s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(9) {
-    transition-delay: .45s;
+    transition-delay: 0.45s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(10) {
-    transition-delay: .5s;
+    transition-delay: 0.5s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(11) {
-    transition-delay: .55s;
+    transition-delay: 0.55s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(12) {
-    transition-delay: .6s;
+    transition-delay: 0.6s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(13) {
-    transition-delay: .65s;
+    transition-delay: 0.65s;
   }
   #cs-navigation .cs-li-link.cs-drop-link {
     font-size: 1rem;
@@ -817,11 +802,9 @@ body {
     display: none;
   }
 }
-
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
-
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   body.scroll #cs-navigation {
@@ -837,7 +820,7 @@ body {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   #cs-navigation .cs-top-bar {
     width: 100%;
@@ -860,7 +843,7 @@ body {
   }
   #cs-navigation .cs-top-container:before {
     /* grey background */
-    content: '';
+    content: "";
     width: 100vw;
     height: 100%;
     background: #f7f7f7;
@@ -909,7 +892,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   #cs-navigation .cs-social-link:hover {
     transform: scale(1.1);
@@ -977,7 +960,7 @@ body {
     color: var(--headerColor);
     display: block;
     position: relative;
-    transition: color .3s;
+    transition: color 0.3s;
   }
   #cs-navigation .cs-li-link:hover {
     color: var(--primary);
@@ -1003,10 +986,10 @@ body {
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
-    transition: color .3s;
+    transition: color 0.3s;
   }
   #cs-navigation .cs-button-solid:before {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 0%;
@@ -1015,7 +998,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width .3s;
+    transition: width 0.3s;
   }
   #cs-navigation .cs-button-solid:hover:before {
     width: 100%;
@@ -1042,7 +1025,7 @@ body {
     color: var(--secondary);
   }
   body.dark-mode #cs-navigation .cs-top-link {
-    opacity: .8;
+    opacity: 0.8;
   }
   body.dark-mode #cs-navigation .cs-logo,
   body.dark-mode #cs-navigation .cs-link-icon {
@@ -1050,8 +1033,6 @@ body {
     filter: grayscale(1) brightness(1000%);
   }
 }
-
-                              
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- -*/
@@ -1139,7 +1120,6 @@ body {
 /*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
-
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #contact-1525 {
@@ -1352,10 +1332,9 @@ body {
     opacity: 0.5;
   }
   body.dark-mode #contact-1525 .cs-background {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
-                                
 /*-- -------------------------- -->
 <---           Footer           -->
 <--- -------------------------- -*/
@@ -1569,5 +1548,6 @@ body {
     background: #061623;
   }
 }
+
 
 /*# sourceMappingURL=root.css.map */
