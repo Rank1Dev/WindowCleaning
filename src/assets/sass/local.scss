@@ -382,6 +382,8 @@
     }
     #sbs-1443 .cs-container {
       width: 100%;
+      padding: var(--sectionPadding);
+      padding-top: 0;
       /* changes to 1280px at desktop */
       max-width: 34.375rem;
       margin: auto;
@@ -397,6 +399,7 @@
       text-align: left;
       width: 100%;
       max-width: 33.875rem;
+      // padding: 10px;
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */

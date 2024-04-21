@@ -370,6 +370,8 @@
   }
   #sbs-1443 .cs-container {
     width: 100%;
+    padding: var(--sectionPadding);
+    padding-top: 0;
     /* changes to 1280px at desktop */
     max-width: 34.375rem;
     margin: auto;
