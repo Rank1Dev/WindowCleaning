@@ -638,6 +638,8 @@
     #sbs-1443 {
       /* padding: var(--sectionPadding); */
       overflow: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     #sbs-1443 .cs-container {
       width: 100%;
